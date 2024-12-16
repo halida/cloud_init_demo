@@ -1,5 +1,3 @@
-# https://cloudinit.readthedocs.io/en/latest/tutorial/qemu.html
-
 clound_init_server:
 	python3 -m http.server --directory cloud_init
 
