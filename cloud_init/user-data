@@ -1,0 +1,10 @@
+#cloud-config
+ssh_import_id:
+  - gh:halida
+sudo: ALL=(ALL) NOPASSWD:ALL
+
+# mkpasswd --method=SHA-512 --rounds=4096
+# password: ??
+
+# chpasswd:
+#   expire: False
