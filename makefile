@@ -12,8 +12,8 @@ create_server:
 # quit: Ctrl-a x
 run_server:
 	qemu-system-x86_64                                            \
-    -net nic                                                    \
-    -net user,hostfwd=tcp::2222-:22 \
+    -netdev bridge,br=virbr0,id=net0 \
+    -device virtio-net-pci,netdev=net0 \
     -machine accel=kvm:tcg                                      \
     -m 1024                                                      \
     -nographic                                                  \
